@@ -3,7 +3,7 @@ const db = require("../configs/db.config.js");
 exports.getAllItems = async () => {
     try {
         const res = await db.query("SELECT * FROM items;");
-        return res.row;
+        return res.rows; 
     } catch (error) {
         console.error("Query execution error", error);
         throw error;
